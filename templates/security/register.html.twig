@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<a href="{{ path('security_login') }}"> <- Login </a>
+<h5> Account Infos </h5>
+{{form_start(formCompte)}}
+{{form_widget(formCompte)}}
+
+<h5> User Infos </h5>
+{{form_start(formClient)}}
+{{form_widget(formClient)}}
+
+    <button type="submit"> Register </button>
+{{form_end(formClient)}}
+{{form_end(formCompte)}}
+
+{% endblock %}
